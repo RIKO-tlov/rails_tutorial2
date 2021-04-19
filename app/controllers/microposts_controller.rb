@@ -1,6 +1,6 @@
 class MicropostsController < ApplicationController
   before_action :set_micropost, only: %i[ show edit update destroy ]
-  
+
 
   # GET /microposts or /microposts.json
   def index
@@ -64,6 +64,6 @@ class MicropostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def micropost_params
-      params.require(:micropost).permit(:content, :users_id)
+      params.require(:micropost).permit(:content, :user_id)
     end
 end
